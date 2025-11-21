@@ -1,0 +1,36 @@
+# Quartus output files
+/output_files/
+/db/
+/incremental_db/
+/db_backup/
+/*.qws
+/*.qpf
+/*.smsg
+/*.rpt
+/*.pof
+/*.sof
+/*.jic
+/*.qsf
+
+# Simulation / ModelSim files
+/work/
+/modelsim.ini
+/*.wlf
+/*.vcd
+/*.do
+/*.log
+
+# Temporary files
+*.bak
+*.tmp
+*.sv~
+*.vhd~
+*.html~
+*.pdf~
+*.png~
+*.jpg~
+*.jpeg~
+
+# OS files
+.DS_Store
+Thumbs.db
