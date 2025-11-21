@@ -1,3 +1,30 @@
+-- Engineer: Mnyar Hees
+--
+
+-- Description:
+-- This testbench is written to verify the functionality of the
+-- 'vga_controller' VHDL design. It generates a 50 MHz clock, applies
+-- a reset sequence, and drives different KEY input combinations to
+-- test the RGB output areas.
+--
+-- The testbench performs the following:
+-- 1. Generates a 50 MHz clock (20 ns period)
+-- 2. Applies an active-low reset pulse
+-- 3. Activates each color individually:
+--        KEY = "001" → Red area
+--        KEY = "010" → Green area
+--        KEY = "100" → Blue area
+-- 4. Activates all colors simultaneously:
+--        KEY = "111"
+-- 5. Allows the simulation to run so that VGA_HS, VGA_VS, and RGB
+--    signals can be observed in ModelSim.
+--
+-- This file contains no timing checks on VGA protocol; it simply
+-- verifies that the internal logic reacts correctly to button inputs.
+--
+-- The testbench has no ports and does not require a clock enable
+-- since all signals are locally generated.
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
@@ -99,3 +126,4 @@ BEGIN
     END PROCESS stim_process;
 
 END behavior;
+
